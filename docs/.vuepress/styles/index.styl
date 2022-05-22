@@ -1,0 +1,53 @@
+$accentColor = #3EB9C8 // 主题⾊
+$textColor = #2c3e50 !important// ⽂字颜⾊
+$borderColor = #eaecef // 边框颜⾊
+$codeBgColor = #282c34 // 代码背景颜⾊
+$nav-textColor=#1989fa !important// 头部导航文字hover颜色
+$sidebar-textColor=#409eff !important//左侧导航文字hover颜色
+// 代码库重置
+a{
+    color:$textColor ;
+}
+a:hover{
+    color:$nav-textColor;
+}
+.page-nav .next:hover,.page-nav .prev:hover{
+    color:$nav-textColor;
+}
+.nav-link{
+    color:$nav-textColor;
+    opacity:0.5
+}
+.nav-item .router-link-active{
+    color:$nav-textColor;
+    opacity:1
+    border-bottom-color:$nav-textColor;
+}
+a.sidebar-link.active{
+    color:$sidebar-textColor;
+    border-left-color:#ffffff00 !important;
+}
+a.sidebar-link:hover{
+    color:$sidebar-textColor;
+}
+
+.theme-container,.custom-theme-container {
+  /* 特定页面的 CSS */
+  width:1140px;
+  margin:0 auto;
+  .navbar{
+    width: 1140px;
+    right:auto;
+  }
+  .navbar,.sidebar{
+    left:auto;
+  }
+  h2,h3,h4,h5{
+    font-weight:400;
+  }
+  .page{
+    a{
+        color:$nav-textColor;
+    }
+  }
+}
