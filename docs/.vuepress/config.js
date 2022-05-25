@@ -62,7 +62,7 @@ module.exports = {
         },
     },
     base: '/docs/',
-    plugins: ['demo-container','plugin-back-to-top'],
+    plugins: ['demo-container','@vuepress/back-to-top'],
     configureWebpack: {
         resolve: {
             alias: {

@@ -5,6 +5,7 @@
                 <div class="dyNL-item" v-for="(item, idx) in data" :key="'NL_' + idx" :style="{
                     width: nlTotal == 0 ? '25%' : ((String(item.num).replace(/\D/g,'')) / nlTotal) * 100 + '%',
                     background: item.color,
+                    ...itemHeight
                 }">
                     <div class="dyNL-text" ref="num" :style="{...numStyle}">{{ item.num }}</div>
                     <div class="dyNL-size" ref="min" :style="{...minStyle}">{{ item.min }}</div>
@@ -42,37 +43,45 @@ export default {
                 },
             ]
         },
+        height:Number|String,
         fontUnit:{type:String,default:'px'},
-        numSize:Number,
+        numSize:Number|String,
         numColor:String,
-        numTop:Number,
-        minSize:Number,
+        numTop:Number|String,
+        minSize:Number|String,
         minColor:String,
-        minTop:Number,
+        minTop:Number|String,
         borderStyle:String,
         borderColor:String,
-        borderWidth:Number
+        borderWidth:Number|String,
+        padding:Number|String,
     },
     computed: {
+        itemHeight(){
+            return{
+                height:this.height+this.fontUnit
+            }
+        },
         borderSty(){
             return {
-                borderWidth:this.borderWidth,
+                borderWidth:this.borderWidth+this.fontUnit,
                 borderStyle:this.borderStyle,
                 borderColor:this.borderColor,
+                padding:this.padding+this.fontUnit
             }
         },
         numStyle(){
             return {
                 fontSize:this.numSize+this.fontUnit,
                 color:this.numColor,
-                top:this.numTop,
+                top:this.numTop+this.fontUnit,
             }
         },
         minStyle(){
             return {
                 fontSize:this.minSize+this.fontUnit,
                 color:this.minColor,
-                top:this.minTop,
+                top:this.minTop+this.fontUnit,
             }
         }
     },
@@ -108,8 +117,6 @@ export default {
         contentMargin(){
             const top=this.$refs.num[0].offsetTop;
             const bottom=this.$refs.min[0].offsetTop;
-            console.log(top)
-            console.log(bottom)
             this.$refs.content.style.marginTop=Math.abs(top)+'px';
             this.$refs.content.style.marginBottom=Math.abs(bottom)+'px';
         },
