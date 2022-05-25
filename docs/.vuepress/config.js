@@ -1,4 +1,5 @@
-const path = require('path')
+const path = require('path');
+const navside=require('./config/index')
 module.exports = {
     locales: {
         // 键名是该语言所属的子路径
@@ -55,41 +56,13 @@ module.exports = {
                 },
                 // 当前 locale 的 algolia docsearch 选项
                 algolia: {},
-                nav: [
-                    { text: '主页', link: '/zh/' },
-                    { text: '组件', link: '/zh/components/Install' },
-                    {
-                        text: '百度地址',
-                        link: 'http://www.baidu.com'
-                    }
-                ],
-                sidebar: {
-                    "/zh/components/": [
-                        {
-                            title: '开发指南',
-                            collapsable: false,
-                            sidebarDepth: -1,
-                            children: [
-                                'Install',
-                                "quickstart"
-                            ]
-                        }, {
-                            title: '组件',
-                            collapsable: false,
-                            sidebarDepth: -1,
-                            children: [
-                                'Icon',
-                                'Button'
-                            ]
-                        }
-                    ]
-
-                },
+                nav: navside.nav.NavItemsZH,
+                sidebar: navside.sidebar.SidebarZH,
             }
         },
     },
     base: '/docs/',
-    plugins: ['demo-container'],
+    plugins: ['demo-container','plugin-back-to-top'],
     configureWebpack: {
         resolve: {
             alias: {

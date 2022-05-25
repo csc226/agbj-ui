@@ -1,0 +1,54 @@
+.dyNL-box {
+    .dyNL-content {
+    //   margin-top: 4.5rem;
+    //   margin-bottom: 2rem;
+      margin-left: 0.6rem;
+      .dyNL-border-box {
+        // height: 2rem;
+        // box-shadow: inset 0 0 0.6rem 0.1rem
+        //   rgba(255, 255, 255, 0.5019607843137255);
+        border:1px solid rgba(255,193,7,0.5);
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        padding: 2px 2px;
+        box-sizing: border-box;
+        .dyNL-item {
+          height: 16px;
+          margin-right: 0.4rem;
+          position: relative;
+          min-width:10%;
+          &:first-child {
+            border-radius: 1rem 0 0 1rem;
+            .dyNL-size {
+              left: -0.4rem;
+            }
+          }
+          &:last-child {
+            border-radius: 0 1rem 1rem 0;
+            margin-right: 0;
+          }
+          .dyNL-text {
+            font-size: 16px;
+            font-family: D-DIN DIN-Bold, D-DIN DIN;
+            font-weight: bold;
+            color: #ffc107;
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+          }
+          .dyNL-size {
+            font-size: 14px;
+            font-family: D-DIN DIN-Bold, D-DIN DIN;
+            font-weight: bold;
+            color: #ffc107;
+            position: absolute;
+            top:22px;
+            left: -1rem;
+          }
+        }
+      }
+    }
+  }
