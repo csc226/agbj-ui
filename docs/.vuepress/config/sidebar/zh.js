@@ -16,7 +16,8 @@ module.exports={
                 children: [
                     'Icon',
                     'Button',
-                    "Distribute"
+                    "Distribute",
+                    "PieChart"
                 ]
             }
         ]

@@ -3,6 +3,7 @@
   "version": "1.1.2",
   "main": "lib/agbj.common.js",
   "scripts": {
+    "start": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build  --no-clean",
     "test:unit": "vue-cli-service test:unit",
@@ -14,6 +15,7 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "three": "^0.141.0",
     "vue": "^2.6.14"
   },
   "devDependencies": {
