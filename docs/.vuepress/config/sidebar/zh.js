@@ -17,7 +17,8 @@ module.exports={
                     'Icon',
                     'Button',
                     "Distribute",
-                    "PieChart"
+                    "PieChart",
+                    "DrawImageColor"
                 ]
             }
         ]

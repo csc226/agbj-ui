@@ -1,6 +1,6 @@
 ---
-title:3D饼图
-permalink:/fonts
+title: 3D饼图
+permalink: /fonts
 ---
 
 ## pieChart 3D饼图

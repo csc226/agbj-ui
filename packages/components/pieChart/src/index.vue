@@ -4,7 +4,7 @@
     </div>
 </template>
 <script>
-import pieChart from "./main.js";
+import pieChart from "./main.js"; 
 export default {
     name: 'agPieChart',
     components: {

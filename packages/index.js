@@ -2,13 +2,15 @@ import Vue from "vue";
 import agButton from "./components/ag-button";
 import agIcon from "./components/ag-icon";
 import Distribute from "./components/distribute";
-import pieChart from "./components/pieChart";
+import PieChart from "./components/pieChart";
+import DrawImageColor from "./components/drawImageColor";
 
 const components=[
     agIcon,
     agButton,
     Distribute,
     PieChart,
+    DrawImageColor,
 ]
 const install=function(Vue){
     if(install.installed) return;
@@ -25,7 +27,8 @@ export default {
     Distribute,
     PieChart,
     agIcon,
-    agButton
+    agButton,
+    DrawImageColor,
 }
-import pieChart from "./components/pieChart/src"
-Vue.prototype.$pieChart = pieChart;
+// import pieChart from "./components/pieChart/src/main.js"
+// Vue.prototype.$pieChart = pieChart;

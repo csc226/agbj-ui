@@ -32,13 +32,8 @@ module.exports = {
                     }
                 },
                 algolia: {},
-                nav: [
-                    { text: 'Nested', link: '/nested/', ariaLabel: 'Nested' }
-                ],
-                sidebar: {
-                    '/': [/* ... */],
-                    '/nested/': [/* ... */]
-                }
+                nav: navside.nav.NavItemsZH,
+                sidebar: navside.sidebar.SidebarZH
             },
             '/zh/': {
                 // 多语言下拉菜单的标题

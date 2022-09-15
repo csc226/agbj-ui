@@ -1,6 +1,6 @@
 module.exports = {
     NavItemsZH: [
-        { text: '组件', link: '/zh/components/' },
+        { text: '组件', link: '/zh/components/Install/' },
         { text: 'github', link: 'https://github.com/csc226/agbj-ui.git' },
 
         // {
